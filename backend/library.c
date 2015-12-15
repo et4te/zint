@@ -896,3 +896,19 @@ int ZBarcode_Render(struct zint_symbol *symbol, float width, float height)
 	// Send the request to the render_plot method
 	return render_plot(symbol, width, height);
 }
+
+/* Struct mutators / accessors for easier FFI */
+char* ZBarcode_Set_Symbology(struct zint_symbol* symbol, int symbology) {
+  symbol->symbology = symbology;
+}  
+
+char* ZBarcode_Get_Bitmap(struct zint_symbol* symbol) {
+  return symbol->bitmap;
+}  
+int ZBarcode_Get_Bitmap_Width(struct zint_symbol* symbol) {
+  return symbol->bitmap_width;
+}
+int ZBarcode_Get_Bitmap_Height(struct zint_symbol* symbol) {
+  return symbol->bitmap_height;
+}
+
