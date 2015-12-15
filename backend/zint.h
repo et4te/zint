@@ -236,6 +236,21 @@ ZINT_EXTERN int ZBarcode_Encode_File_and_Buffer(struct zint_symbol *symbol, char
 
 ZINT_EXTERN int ZBarcode_ValidID(int symbol_id);
 
+/* Struct mutators / accessors for easier FFI */
+ZINT_EXTERN char* ZBarcode_Set_Symbology(struct zint_symbol* symbol, int symbology) {
+  symbol->symbology = symbology;
+}  
+
+ZINT_EXTERN char* ZBarcode_Get_Bitmap(struct zint_symbol* symbol) {
+  return symbol->bitmap;
+}  
+ZINT_EXTERN int ZBarcode_Get_Bitmap_Width(struct zint_symbol* symbol) {
+  return symbol->bitmap_width;
+}
+ZINT_EXTERN int ZBarcode_Get_Bitmap_Height(struct zint_symbol* symbol) {
+  return symbol->bitmap_height;
+}
+  
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
