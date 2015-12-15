@@ -911,4 +911,9 @@ int ZBarcode_Get_Bitmap_Width(struct zint_symbol* symbol) {
 int ZBarcode_Get_Bitmap_Height(struct zint_symbol* symbol) {
   return symbol->bitmap_height;
 }
+char* ZBarcode_Get_Error_Text(struct zint_symbol* symbol) {
+  char* err = (char*) malloc(sizeof(char)*100);
+  memcpy(err, symbol->errtxt, 100);
+  return err;
+}
 

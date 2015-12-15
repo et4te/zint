@@ -242,7 +242,7 @@ ZINT_EXTERN void ZBarcode_Set_Symbology(struct zint_symbol* symbol, int symbolog
 ZINT_EXTERN char* ZBarcode_Get_Bitmap(struct zint_symbol* symbol);
 ZINT_EXTERN int ZBarcode_Get_Bitmap_Width(struct zint_symbol* symbol);
 ZINT_EXTERN int ZBarcode_Get_Bitmap_Height(struct zint_symbol* symbol);
-
+ZINT_EXTERN char* ZBarcode_Get_Error_Text(struct zint_symbol* symbol);
   
 #ifdef __cplusplus
 }
