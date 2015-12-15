@@ -898,7 +898,7 @@ int ZBarcode_Render(struct zint_symbol *symbol, float width, float height)
 }
 
 /* Struct mutators / accessors for easier FFI */
-char* ZBarcode_Set_Symbology(struct zint_symbol* symbol, int symbology) {
+void ZBarcode_Set_Symbology(struct zint_symbol* symbol, int symbology) {
   symbol->symbology = symbology;
 }  
 
