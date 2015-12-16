@@ -901,6 +901,18 @@ int ZBarcode_Render(struct zint_symbol *symbol, float width, float height)
 void ZBarcode_Set_Symbology(struct zint_symbol* symbol, int symbology) {
   symbol->symbology = symbology;
 }  
+void ZBarcode_Set_Option1(struct zint_symbol* symbol, int option_1) {
+  symbol->option_1 = option_1;
+}
+void ZBarcode_Set_Option2(struct zint_symbol* symbol, int option_2) {
+  symbol->option_2 = option_2;
+}
+void ZBarcode_Set_Option3(struct zint_symbol* symbol, int option_3) {
+  symbol->option_3 = option_3;
+}
+void ZBarcode_Set_Scale(struct zint_symbol* symbol, float scale) {
+  symbol->scale = scale;
+}
 
 char* ZBarcode_Get_Bitmap(struct zint_symbol* symbol) {
   return symbol->bitmap;
